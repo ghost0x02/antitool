@@ -56,9 +56,8 @@ print("""
 [2] ADMİN PANEL KAZIYICI
 [3] DNS KAZIYICI
 [4] SQL KAZIYICI
-[5] IP KAZIYICI
-[6] SPLOİT
-[7] ÇIKIŞ
+[5] SPLOİT
+[6] ÇIKIŞ
 """)
 print(Style.RESET_ALL)
 
@@ -209,37 +208,15 @@ S:::::::::::::::SS    QQ:::::::::::Q  L::::::::::::::::::::::L
     os.system("python3 sqlmap.py -u " + hedefip + " -D " + db + " -T " + tb + " --columns")
     cl = input("Hangi columnsu çekeceksiniz seçiniz: ")
     os.system("python3 sqlmap.py -u " + hedefip + " -D " + db + " -T " + tb + " -C " + cl + " --dump")
+  
 
-
-elif hedefip == '5':
-
-    print(Fore.BLUE + "")
-
-    print("""
-
-
- ██▓ ██▓███       ▄████ ▓█████  ███▄    █
-▓██▒▓██░  ██▒    ██▒ ▀█▒▓█   ▀  ██ ▀█   █
-▒██▒▓██░ ██▓▒   ▒██░▄▄▄░▒███   ▓██  ▀█ ██▒
-░██░▒██▄█▓▒ ▒   ░▓█  ██▓▒▓█  ▄ ▓██▒  ▐▌██▒
-░██░▒██▒ ░  ░   ░▒▓███▀▒░▒████▒▒██░   ▓██░
-░▓  ▒▓▒░ ░  ░    ░▒   ▒ ░░ ▒░ ░░ ▒░   ▒ ▒
- ▒ ░░▒ ░          ░   ░  ░ ░  ░░ ░░   ░ ▒░
- ▒ ░░░          ░ ░   ░    ░      ░   ░ ░
- ░                    ░    ░  ░         ░
-""")
-
-    os.system("git clone https://github.com/ghost0x02/ip-tool")
-    os.chdir("ip-tool")
-    os.system("python3 ip-tool.py")
-
-if hedefip == "6":
+if hedefip == "5":
 
     os.system("git clone https://github.com/ghost0x02/sploit")
     os.chdir("sploit")
     os.system("python3 sploit.py")
 
 
-hedefip = "7"
-if hedefip == "7":
+hedefip = "6"
+if hedefip == "6":
     sys.exit()
